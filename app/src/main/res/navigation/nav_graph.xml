@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mangaFragment">
+
+    <fragment
+        android:id="@+id/mangaFragment"
+        android:name="com.example.kitsuapi.ui.fragments.manga.MangaListFragment"
+        android:label="Manga"
+        tools:layout="@layout/fragment_manga_list">
+
+        <action
+            android:id="@+id/action_mangaFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/animeFragment"
+        android:name="com.example.kitsuapi.ui.fragments.anime.AnimeListFragment"
+        android:label="Anime"
+        tools:layout="@layout/fragment_anime_list" >
+
+        <action
+            android:id="@+id/action_animeFragment_to_mangaFragment"
+            app:destination="@id/mangaFragment" />
+    </fragment>
+
+</navigation>
